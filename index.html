@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras - PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1>Lista de Compras</h1>
+    </header>
+
+    <section>
+        <label for="categoria">Escolha uma Categoria:</label>
+        <select id="categoria">
+            <option value="">Selecione...</option>
+            <option value="limpeza">Material de Limpeza</option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="utilidades">Utilidades</option>
+        </select>
+    </section>
+
+    <section id="itens-container" style="display: none;">
+        <h2>Itens Disponíveis:</h2>
+        <div id="itens-lista"></div>
+        
+        <!-- Botão e input para adicionar um item personalizado -->
+        <button id="escreverItemBtn">Escrever Item</button>
+        <input type="text" id="itemPersonalizado" placeholder="Digite um item" style="display: none;">
+    
+        <button id="adicionar-itens">Adicionar Itens Selecionados</button>
+    </section>
+    
+
+    <section>
+        <h2>Itens Selecionados:</h2>
+        <ul id="lista-itens-selecionados"></ul>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
